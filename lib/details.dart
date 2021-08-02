@@ -1,4 +1,7 @@
+// @dart=2.9
 import 'package:flutter/material.dart';
+
+import 'main.dart';
 
 class Address extends StatefulWidget {
   @override
@@ -110,7 +113,10 @@ class _AddressState extends State<Address> {
                     height: 20,
                   ),
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(
+                          builder: (BuildContext context) => Homepage()));
+                    },
                     child: Text(
                       'Confirm Address',
                       style: TextStyle(
